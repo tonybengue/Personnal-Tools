@@ -1,8 +1,10 @@
 <?php
-	
+namespace html;
+// plus besoin de \html
+
 // Classe héritée
 class BootstrapForm extends Form {
-	/** 
+	/**
 	* @param string $html Code HTML entouré
 	* @return string
 	*/
@@ -10,7 +12,7 @@ class BootstrapForm extends Form {
 		return "<div class=\"form-group\">{$html}</div>";
 	}
 
-	/** 
+	/**
 	* @param string
 	* @return string
 	*/
@@ -20,7 +22,7 @@ class BootstrapForm extends Form {
 		);
 	}
 
-	/** 
+	/**
 	* @return string
 	*/
 	public function submit() {

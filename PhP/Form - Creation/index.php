@@ -8,6 +8,9 @@
 <body>
 <header>
 <?php
+use \tools\Autoloader;
+use \html\BootstrapForm;
+
 // Appel de l'Autoloader
 require 'Autoloader.php';
 Autoloader::register();
@@ -18,10 +21,10 @@ $form = new BootstrapForm($_POST);
 ?>
 
 <form action="#" method="post">
-<?php 
+<?php
 	echo $form->input('username');
 	echo $form->input('password');
-	echo $form->submit('submit');		
+	echo $form->submit('submit');
 ?>
 </form>
 </body>
