@@ -1,4 +1,4 @@
-<?php 
+<?php
 	class Debug {
 		static function debugPresented($toDebug) {
 			echo '<pre>';
@@ -6,4 +6,8 @@
 			echo '</pre>';
 			die;
 		}
-	}	
+
+		static function jumpALine($_string) {
+			echo $_string . "<br>";
+		}
+	}
