@@ -6,7 +6,6 @@
 	<title>Document</title>
 </head>
 <body>
-<header>
 <?php
 use \tools\Autoloader;
 use \html\BootstrapForm;
