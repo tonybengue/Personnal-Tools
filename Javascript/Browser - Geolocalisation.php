@@ -3,20 +3,21 @@
 <body onload="getLocation()">
 
 <p>Votre localisation va apparaître ci dessous</p>
-<p id="demo"></p>
+<div id="demo"></div>
 
 <script>
-	var x = document.getElementById("demo");
-	function getLocation() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(showPosition);
-		} else {
-			x.innerHTML = "La Géolocalisation n'est pas supportée";
-		}
+	const getLocation = () => {
+		navigator.geolocation ?
+			navigator.geolocation.getCurrentPosition(showPosition) :
+			x.innerHTML = "La Géolocalisation n'est pas supportée"
 	}
-	function showPosition(position) {
-		x.innerHTML = "Latitude: " + position.coords.latitude +
-		"<br>Longitude: " + position.coords.longitude;
+	const showPosition = position => {
+		const target = document.getElementById("demo")
+		const template = `
+			<p>Latitude: ${position.coords.latitude}</p>
+			<p>Longitude: ${position.coords.longitude}</p>
+		`
+		target.innerHTML = template
 	}
 </script>
 </body>
