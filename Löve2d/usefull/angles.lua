@@ -1,4 +1,3 @@
-
 -- Move an object by an angle
 function obj:moveFromAngle(pAngle, pSpeed, pVelocityX, pVelocityY, dt)
   -- Angle en radian * vitesse objet (angleRadian en cosinus et sinus * vitesse)
@@ -12,6 +11,9 @@ end
 
 -- Return the angle beetween 2 points
 function math.angle(x1,y1, x2,y2) return math.atan2(y2-y1, x2-x1) end
+
+-- Distance entre 2 coordonnées
+function math.dist(x1,y1, x2,y2) return ((x2-x1)^2+(y2-y1)^2)^0.5 end
 
 -- Reset the angle for left and right
 function obj:resetAngles(pLeft, pRight, pAngle, pAngleMin, pAngleMax, pAngleRotationSpeed, dt) 
